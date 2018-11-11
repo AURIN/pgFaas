@@ -1,0 +1,12 @@
+[submodule "pgFaas-ui"]
+	path = pgFaas-ui
+	url = git@github.com:AURIN/pgFaas-ui.git
+[submodule "pgFaas-infra"]
+	path = pgFaas-infra
+	url = git@github.com:AURIN/pgFaas-infra.git
+[submodule "pgFaas-api"]
+	path = pgFaas-api
+	url = git@github.com:AURIN/pgFaas-api.git
+[submodule "pgFaas-functions"]
+	path = pgFaas-functions
+	url = git@github.com:AURIN/pgFaas-functions.git
