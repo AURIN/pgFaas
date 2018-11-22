@@ -10,6 +10,11 @@ The project is composed of four different modules
 * [UI](https://github.com/AURIN/pgFaas-ui) A web front-end to the API. 
 
 
+## Presentations
+
+[FOSS4G SotM Oceania '18](https://docs.google.com/presentation/d/1D6HrRwEBD93NiIH4OxK7XgkwGulOHRIpYsuu6mNSG84/edit?usp=sharing)
+
+
 ## Architecture
 
 pgFaas functions run on OpenFaas through the pgFaas API, and connect to a PostgreSQL instance.
