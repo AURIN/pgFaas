@@ -1,6 +1,6 @@
 # pgFaas - PostGresql Functions As A Service
 
-Proof-of-concept of a FaaS on PostgreSQL.  
+Proof-of-concept of a FaaS on PostgreSQLPostGIS.  
 
 The project is composed of four different modules   
 
@@ -22,37 +22,53 @@ database, but, crucially, every function can be passed a Node.js script upon cre
 containers with different behaviour to be created.
 
 For instance, a pgFaas function may be based on this script (which, for the sake of simlicity, does
-not use POstgreSQL):
+not use PostgreSQL):
 ```javascript
 module.exports = {
-  echo: (sqlexec, req, callback) => {
-    return callback(null, req.body);
-  },
-  plus: (sqlexec, req, callback) => {
+  add: (sqlexec, req, callback) => {
     return callback(null, {c: req.body.a + req.body.b});
   },
-  headers: (sqlexec, req, callback) => {
-    return callback(null, req.headers);
+  minus: (sqlexec, req, callback) => {
+    return callback(null, {c: req.body.a - req.body.b});
+  },
+  times: (sqlexec, req, callback) => {
+    return callback(null, {c: req.body.a * req.body.b});
+  },
+  div: (sqlexec, req, callback) => {
+    return callback(null, {c: req.body.a / req.body.b});
+  },
+  mod: (sqlexec, req, callback) => {
+    return callback(null, {c: req.body.a % req.body.b});
   }
 };
 ```
 
-There are three `verbs` in this function (methods, if you like) that can be invoked independently.
+There are four `verbs` in this function (methods, if you like) that can be invoked independently.
 For instance:
 ```bash
-curl -XPOST "http://pgfaas/api/simple/dazzling_dijkstra "\
+curl -XPOST "http://sandbox.pgfaas.aurin.org.au/api/function/namespaces/sample/math"\
   --header "Content-Type:application/json"\
-  --data '{"verb":"plus", "a":2, "b":4}
+  --data '{"verb":"add", "a":2, "b":4}'
 ``` 
-Would execute the `plus` verb on arguments 2 and 4, resulting in:
+
+Would execute the `add` verb on arguments 2 and 4, resulting in:
 `{"c":6}`
 
 
-## Sandbox
+Another function (`osm` under the same `sample` namespace) contains geoprocessing functions, such as finding the K Nearest Neighbours bus stops to a location:
+```bash
+curl -XPOST "http://sandbox.pgfaas.aurin.org.au/api/function/namespaces/sample/osm"\
+  --header "Content-Type:application/json"\
+  --data '{"verb":"knnbusstops","k":20,"y":-22.28,"x":166.6}'
+``` 
+(this function returns GeoJSON.)
 
-### Where to go from here
 
-An online sandbox is available at TODO (treat it kindly). It is re-created every 24 hours, to ensure its viability even after abuse.   
+## Where to go from here
+
+### Sandbox
+
+An [online sandbox is available](http://sandbox.pgfaas.aurin.org.au/ui/) (treat it kindly). It gives access to an OpenStreetMap (New Caledonia) database.   
 
 
 ### Installation and use
@@ -60,7 +76,7 @@ An online sandbox is available at TODO (treat it kindly). It is re-created every
 Please clone the [Infra](https://github.com/AURIN/pgFaas-infra) module, and follow the instructions in the README to install pgFaas on your own infrastructure.
 
 
-## Contributing
+### Contributing
 
-TODO   
+Add issues to GitHub, so that we can start a conversation.   
 
