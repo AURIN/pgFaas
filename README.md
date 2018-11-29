@@ -86,10 +86,10 @@ Please clone the [Infra](https://github.com/AURIN/pgFaas-infra) module, and foll
 Add issues to GitHub, so that we can start a conversation.
 
 
-### Kudos
+## Kudos
 
 Powered by:
 
-[logo](https://raw.githubusercontent.com/AURIN/pgFaas/master/assets/postgresql.png)
-[logo](https://raw.githubusercontent.com/AURIN/pgFaas/master/assets/openfaas.png)
+![logo](https://raw.githubusercontent.com/AURIN/pgFaas/master/assets/postgresql.png "PostgreSQL")
+![logo](https://raw.githubusercontent.com/AURIN/pgFaas/master/assets/openfaas.png "OpenFaaS")
 
