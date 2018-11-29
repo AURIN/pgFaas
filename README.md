@@ -90,8 +90,8 @@ Add issues to GitHub, so that we can start a conversation.
 
 Powered by:
 
-[logo](https://github.com/AURIN/pgFaas/assets/postgresql.png")
-[logo](https://github.com/AURIN/pgFaas/assets/openfaas.png")
+[logo](https://raw.githubusercontent.com/AURIN/pgFaas/assets/postgresql.png")
+[logo](https://raw.githubusercontent.com/AURIN/pgFaas/assets/openfaas.png")
    
    
 
