@@ -83,5 +83,15 @@ Please clone the [Infra](https://github.com/AURIN/pgFaas-infra) module, and foll
 
 ### Contributing
 
-Add issues to GitHub, so that we can start a conversation.   
+Add issues to GitHub, so that we can start a conversation.
+
+
+### Kudos
+
+Powered by:
+
+[logo](https://github.com/AURIN/pgFaas/assets/postgresql.png")
+[logo](https://github.com/AURIN/pgFaas/assets/openfaas.png")
+   
+   
 
