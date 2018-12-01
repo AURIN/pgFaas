@@ -1,7 +1,6 @@
 # pgFaas - PostGresql Functions As A Service
 
-Proof-of-concept of a FaaS on PostgreSQLPostGIS.  
-
+A proof-of-concept of a FaaS built on PostgreSQLPostGIS and OpenFaaS
 The project is composed of four different modules   
 
 * [Infra](https://github.com/AURIN/pgFaas-infra) A collection of recipes for the deployment of pgFaas under different scenarios.
