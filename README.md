@@ -88,7 +88,5 @@ Add issues to GitHub, so that we can start a conversation.
 ## Kudos
 
 Powered by:
-
-![logo](https://raw.githubusercontent.com/AURIN/pgFaas/master/assets/postgresql.png "PostgreSQL")
-![logo](https://raw.githubusercontent.com/AURIN/pgFaas/master/assets/openfaas.png "OpenFaaS")
-
+[![PostgreSQL](https://raw.githubusercontent.com/AURIN/pgFaas/master/assets/postgresql.png)](https://www.postgresql.org)
+[![OpenFaaS](https://raw.githubusercontent.com/AURIN/pgFaas/master/assets/openfaas.png)](https://www.openfaas.com)
